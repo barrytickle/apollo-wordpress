@@ -1,6 +1,6 @@
 {
     "key": "group_681ce96bbcbbf",
-    "title": "Components - Large Hero",
+    "title": "Block - Large Hero",
     "fields": [
         {
             "key": "field_681ce96b4dc1f",
@@ -126,5 +126,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1746730746
+    "modified": 1746830859
 }

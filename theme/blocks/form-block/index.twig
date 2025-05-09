@@ -1,0 +1,15 @@
+<section data-block="form-block" class="container mx-auto my-20">
+	<div class="flex justify-center mt-6">
+		<form action="{{fields.action}}" method="post" class="w-full md:w-1/2 mx-auto border border-dark-200 rounded-xl p-6 bg-white shadow-md">
+			{% if fields.form_select == "contact" %}
+				{% include './components/forms/contact.twig' %}
+			{% endif %}
+			{% if fields.form_select == "venue-sign-up" %}
+				{% include './components/forms/venue-sign-up.twig' %}
+			{% endif %}
+			{% if fields.form_select == "client-sign-up" %}
+				{% include './components/forms/client-sign-up.twig' %}
+			{% endif %}
+		</form>
+	</div>
+</section>

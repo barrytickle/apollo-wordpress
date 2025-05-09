@@ -4,3 +4,4 @@
 .DS_Store
 /theme/assets/dist/
 .env
+config.json

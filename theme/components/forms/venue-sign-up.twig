@@ -1,0 +1,63 @@
+<h2 class="font-secondary text-5xl font-bold mb-8">Venue Sign up
+</h2>
+
+<div class="flex gap-4">
+	<div class="w-full">
+		<label for="name" class="mb-2">Your Name</label>
+		<input type="text" id="name" name="name" class="w-full border border-dark-200 rounded p-2 mb-4" placeholder="Enter your name" required>
+	</div>
+	<div class="w-full">
+		<label for="venue-type" class="mb-2">Venue Type</label>
+		<input type="text" id="venue-type" name="venue-type" class="w-full border border-dark-200 rounded p-2 mb-4" placeholder="e.g. pub, restaurant ect." required>
+	</div>
+</div>
+
+<label for="business-address" class="mb-2">Business Address</label>
+<textarea id="business-address" name="business-address" class="w-full border border-dark-200 rounded p-2 mb-4" rows="4" placeholder="Enter your business address"></textarea>
+
+<div class="flex gap-4">
+	<div class="w-full">
+		<label for="email" class="mb-2">Email</label>
+		<input type="email" id="email" name="email" class="w-full border border-dark-200 rounded p-2 mb-4" placeholder="Enter your email" required>
+	</div>
+	<div class="w-full">
+		<label for="phone" class="mb-2">Phone</label>
+		<input type="tel" id="phone" name="phone" class="w-full border border-dark-200 rounded p-2 mb-4" placeholder="Enter your phone number">
+	</div>
+</div>
+
+<div class="flex gap-4">
+	<div class="w-full">
+		<label for="date-of-birth" class="mb-2">Date Of Birth</label>
+		<input type="date" id="date-of-birth" name="date-of-birth" class="w-full border border-dark-200 rounded p-2 mb-4" placeholder="DD/MM/YYYY" required>
+	</div>
+	<div class="w-full">
+		<label for="website" class="mb-2">Website</label>
+		<input type="url" id="website" name="website" class="w-full border border-dark-200 rounded p-2 mb-4" placeholder="Enter your website URL">
+	</div>
+</div>
+
+<div class="flex gap-4 mt-4">
+	<div class="w-full">
+		<label for="facebook" class="mb-2">Facebook</label>
+		<input type="text" id="facebook" name="facebook" class="w-full border border-dark-200 rounded p-2 mb-4" placeholder="Facebook URL">
+	</div>
+	<div class="w-full">
+		<label for="instagram" class="mb-2">Instagram</label>
+		<input type="text" id="instagram" name="instagram" class="w-full border border-dark-200 rounded p-2 mb-4" placeholder="Instagram URL">
+	</div>
+</div>
+
+<label for="how-did-you-hear" class="mb-2">How did you hear about us?</label>
+<select id="how-did-you-hear" name="how-did-you-hear" class="w-full border border-dark-200 rounded p-2 mb-4" required>
+	<option value="" disabled selected>Select an option</option>
+	<option value="social-media">Social Media</option>
+	<option value="friend">Friend</option>
+	<option value="advertisement">Advertisement</option>
+	<option value="search-engine">Search Engine</option>
+	<option value="other">Other</option>
+</select>
+<button type="submit" class=" bg-black text-white hover:bg-opacity-80 border-2 border-black font-primary font-medium py-3 px-4 transition duration-300 ease-in-out flex gap-6 items-center">
+	<span class="text-white">Submit</span>
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512" class="h-6 w-6 fill-white"><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d="M352 128c0-17.7-14.3-32-32-32L96 96c-17.7 0-32 14.3-32 32s14.3 32 32 32l146.7 0L41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L288 205.3 288 352c0 17.7 14.3 32 32 32s32-14.3 32-32l0-224z"/></svg>
+</button>
