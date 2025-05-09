@@ -154,6 +154,7 @@ class Timberland extends Timber\Site {
 		wp_dequeue_style( 'wc-block-style' );
 		wp_dequeue_script( 'jquery' );
 		wp_dequeue_style( 'global-styles' );
+		wp_enqueue_media();
 
 		$vite_env = 'production';
 
@@ -192,6 +193,13 @@ class Timberland extends Timber\Site {
 				add_editor_style( $dist_uri . '/' . $manifest[ $editor_css_file ]['file'] );
 			}
 		}
+
+		function mytheme_enqueue_admin_media() {
+			// Load media uploader scripts on all admin pages where needed
+			
+		}
+		add_action('admin_enqueue_scripts', 'mytheme_enqueue_admin_media');
+		
 
 		if ( $vite_env === 'development' ) {
 			function vite_head_module_hook() {
