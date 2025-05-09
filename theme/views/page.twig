@@ -1,0 +1,16 @@
+{% set featured_image = acf_fields.styled_featured_image ?? null %}
+
+{% extends "base.twig" %}
+
+{% block content %}
+	{% if featured_image == "yes" %}
+		<div class="relative -mt-10">
+			<img src="{{ page.image.sizes.full }}" alt="{{ post.image.alt }}" class="w-full h-auto max-h-[400px] object-cover object-center"/>
+			<div class="featured-image-pattern h-20 w-full absolute bottom-0 left-0 bg-contain"></div>
+		</div>
+		<div class="container mx-auto">
+			<h1 class="text-8xl font-secondary font-bold  my-8">{{ post.title }}</h1>
+		</div>
+	{% endif %}
+	{{ processed_content }}
+{% endblock %}

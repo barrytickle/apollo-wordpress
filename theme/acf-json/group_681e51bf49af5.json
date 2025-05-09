@@ -1,0 +1,114 @@
+{
+    "key": "group_681e51bf49af5",
+    "title": "Block - Image CTAs",
+    "fields": [
+        {
+            "key": "field_681e51bf76ce2",
+            "label": "CTAs",
+            "name": "ctas",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 0,
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 2,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_681e51d68995b",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "uploader": "",
+                    "return_format": "array",
+                    "library": "all",
+                    "acfe_thumbnail": 0,
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "parent_repeater": "field_681e51bf76ce2"
+                },
+                {
+                    "key": "field_681e51e58995c",
+                    "label": "Button",
+                    "name": "button",
+                    "aria-label": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "group_681ce99bab6c4"
+                    ],
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0,
+                    "acfe_seamless_style": 1,
+                    "acfe_clone_modal": 0,
+                    "acfe_clone_modal_close": 0,
+                    "acfe_clone_modal_button": "",
+                    "acfe_clone_modal_size": "large",
+                    "parent_repeater": "field_681e51bf76ce2"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/image-ctas"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1746817529
+}

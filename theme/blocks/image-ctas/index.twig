@@ -1,0 +1,12 @@
+<section class="container mx-auto my-20" data-block="image-ctas">
+	<div class="flex flex-col md:flex-row gap-6">
+		{% for block in fields.ctas %}
+			<div class="h-[650px] relative w-full md:w-1/2">
+				<img src="{{ block.image.sizes.large }}" alt="{{ block.image.alt }}" class="w-full h-full rounded-xl object-cover object-center shadow-md"/>
+				<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+					{% include './components/button.twig' with { button: block.button, classes: "text-xl bg-white" } %}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>

@@ -1,0 +1,18 @@
+<section class="container mx-auto my-20" data-block="large-hero">
+	<h1 class="text-7xl leading-[65px] md:text-8xl font-secondary font-bold text-center md:leading-[80px]">{{fields.title ?? "Large Hero"}}</h1>
+	<p class="md:w-1/2 mx-auto text-2xl my-4 text-center font-light">{{fields.description ?? "Description text should be here"}}</p>
+	<div class="flex justify-center ">
+		{% include './components/button.twig' with {
+			button: fields.button,
+			
+			classes:"text-xl" } %}
+	</div>
+	{% if fields.images %}
+		<div class="flex justify-center gap-6 mt-6 overflow-x-hidden">
+
+			{% for image in fields.images %}
+				<img src="{{image.sizes.large}}" alt="{{image.image.alt}}" class="w-full h-auto my-4 max-w-[300px] max-h-[420px] rounded-xl object-cover object-center shadow-md"/>
+			{% endfor %}
+		</div>
+	{% endif %}
+</section>

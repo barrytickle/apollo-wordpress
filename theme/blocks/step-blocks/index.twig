@@ -1,0 +1,21 @@
+<section data-block="step-blocks" class="container mx-auto my-20">
+	<h2 class="text-5xl font-bold mb-2 font-secondary">{{ fields.title }}</h2>
+	<span class="text-lg font-light mb-8 block">{{ fields.subtitle }}</span>
+
+	{% for step in fields.steps %}
+		<div class="flex flex-col {{ loop.index % 2 == 0 ? 'md:flex-row' : 'md:flex-row-reverse' }} gap-12 mb-8">
+			<div class="w-full md:w-1/2 flex flex-col justify-center">
+				<span class="text-2xl font-medium mb-2">Step
+					{{ loop.index  }}</span>
+				<h3 class="text-3xl font-bold">{{ step.title }}</h3>
+				<p class="text-lg font-light mt-4">{{ step.description }}</p>
+			</div>
+			<div class="w-full md:w-1/2 flex justify-center p-3 border border-dark-400 relative rounded-xl">
+				{% if step.image %}
+					<img src="{{ step.image.sizes.large }}" alt="{{ step.image.alt }}" class="w-full h-auto max-h-[300px] rounded-xl object-cover object-center shadow-md "/>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+{% endfor %}</section>

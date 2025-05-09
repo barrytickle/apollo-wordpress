@@ -1,0 +1,17 @@
+<section class="container mx-auto my-20" data-block="half-image-blocks">
+	{% for block in fields.half_image_blocks %}
+		<div class="flex flex-col {{loop.index % 2 == 0 ? " md:flex-row-reverse" : " md:flex-row"}} gap-6">
+			<div class="w-full md:w-1/2">
+				<img src="{{ block.image.sizes.large }}" alt="{{ block.image.alt }}" class="w-full h-[450px] rounded-xl object-cover object-center shadow-md"/>
+			</div>
+			<div class="w-full md:w-1/2 flex flex-col justify-center pr-4">
+				<h2 class="font-bold mb-4 font-secondary text-6xl">{{ block.title }}</h2>
+				<p class="text-2xl">{{ block.description }}</p>
+				{% if block.button %}
+					{% include './components/button.twig' with { button: block.button, classes: "mt-4" } %}
+				{% endif %}
+			</div>
+		</div>
+	{% endfor %}
+
+</section>

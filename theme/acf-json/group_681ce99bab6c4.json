@@ -1,0 +1,80 @@
+{
+    "key": "group_681ce99bab6c4",
+    "title": "Repeatable - Button",
+    "fields": [
+        {
+            "key": "field_681ce99ba5b84",
+            "label": "URL",
+            "name": "url",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_681cfe9c2a0af",
+            "label": "Colour",
+            "name": "colour",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "black": "Black",
+                "white": "White"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_custom": 0,
+            "placeholder": "",
+            "search_placeholder": "",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post",
+                "operator": "==",
+                "value": "1"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1746730782
+}

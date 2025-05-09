@@ -1,0 +1,63 @@
+{
+    "key": "group_681e4378ec28e",
+    "title": "Settings - Page Settings",
+    "fields": [
+        {
+            "key": "field_681e43792df45",
+            "label": "Show Styled Featured Image",
+            "name": "styled_featured_image",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "default_value": "no",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_custom": 0,
+            "placeholder": "",
+            "search_placeholder": "",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1746813864
+}
