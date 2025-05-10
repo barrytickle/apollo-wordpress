@@ -53,7 +53,7 @@ class Timberland extends Timber\Site {
 		return $twig;
 	}
 
-	function custom_wp_title($title, $sep) {
+	public function custom_wp_title($title, $sep) {
 		$path_parts = explode('/', trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/'));
 		$page_title = ucwords(str_replace('-', ' ', end($path_parts)));
 
