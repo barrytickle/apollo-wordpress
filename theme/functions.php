@@ -58,6 +58,11 @@ class Timberland extends Timber\Site {
 		$menus = wp_get_nav_menus();
 		$context['menus'] = [];
 
+		$path_parts = explode('/', trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/'));
+		$page_title = ucwords(str_replace('-', ' ', end($path_parts)));
+		$context['page']['breadcrumbs'] = $page_title ? $page_title . ' | ' . get_bloginfo('name') : get_bloginfo('name');
+		
+
 		$context['page'] = [];
 		$context['page']['title'] = get_the_title();
 		$context['page']['description'] = get_the_excerpt();
