@@ -32,7 +32,6 @@ class Timberland extends Timber\Site {
 		add_action( 'acf/init', array( $this, 'acf_register_blocks' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_assets' ) );
 		add_action( 'acf/init', array( $this, 'register_acf_options_page' ) );
-		add_filter('wp_title', 'custom_wp_title', 10, 2);
 
 
 		add_filter( 'nav_menu_css_class', array( $this, 'add_custom_menu_item_class' ), 10, 4 );
@@ -53,17 +52,6 @@ class Timberland extends Timber\Site {
 		return $twig;
 	}
 
-	public function custom_wp_title($title, $sep) {
-		$path_parts = explode('/', trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/'));
-		$page_title = ucwords(str_replace('-', ' ', end($path_parts)));
-
-		if (is_home()) {
-			$title = $page_title ? $page_title . ' | ' . get_bloginfo('name') : get_bloginfo('name');;
-		} elseif (is_singular('post')) {
-			$title = get_the_title() . " $sep | Apollo Promotions | Looking to hire fresh new talent";
-		}
-		return $title;
-	}
 
 	public function add_to_context( $context ) {
 		global $post;
@@ -293,3 +281,18 @@ function acf_should_wrap_innerblocks( $wrap, $name ) {
 
 add_filter( 'acf/blocks/wrap_frontend_innerblocks', 'acf_should_wrap_innerblocks', 10, 2 );
 
+
+
+function custom_wp_title($title, $sep) {
+	$path_parts = explode('/', trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/'));
+	$page_title = ucwords(str_replace('-', ' ', end($path_parts)));
+
+	if (is_home()) {
+		$title = $page_title ? $page_title . ' | ' . get_bloginfo('name') : get_bloginfo('name');;
+	} elseif (is_singular('post')) {
+		$title = get_the_title() . " $sep | Apollo Promotions | Looking to hire fresh new talent";
+	}
+	return $title;
+}
+
+add_filter('wp_title', 'custom_wp_title', 10, 2);
