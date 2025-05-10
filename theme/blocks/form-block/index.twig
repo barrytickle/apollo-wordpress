@@ -1,6 +1,6 @@
 <section data-block="form-block" class="container mx-auto my-20">
 	<div class="flex justify-center mt-6">
-		<form action="{{fields.action}}" method="post" class="w-full md:w-1/2 mx-auto border border-dark-200 rounded-xl p-6 bg-white shadow-md">
+		<form action="{{fields.action}}" method="POST" class="w-full md:w-1/2 mx-auto border border-dark-200 rounded-xl p-6 bg-white shadow-md" enctype="multipart/form-data">
 			{% if fields.form_select == "contact" %}
 				{% include './components/forms/contact.twig' %}
 			{% endif %}
