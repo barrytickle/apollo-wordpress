@@ -3,7 +3,7 @@
 {% set menu_classes = 'flex items-center justify-between' %}
 
 
-<header class="px-2 w-full top-0 mb-10 z-50 flex justify-between gap-8 md:gap-0 items-center container mx-auto group border-dark-200 border-b py-5 relative ">
+<header class="px-2 w-full top-0 mb-10 z-50 flex justify-between gap-8 md:gap-0 items-center container mx-auto group border-dark-200 border-b py-5 fixed bg-white md:relative ">
 	<a href="/" class="relative z-20">
 		{% if options.logo %}
 			<img src="{{ options.logo }}" alt="Logo" class="h-12 w-auto">
@@ -14,7 +14,7 @@
 
 	<input type="checkbox" id="menu-toggle" class="hidden peer">
 
-	<nav class="{{ menu_classes }} fixed -top-full peer-checked:top-0 h-lvh z-10 left-0 w-full bg-white shadow-lg md:bg-transparent md:shadow-none transition-all duration-300 ease-in-out md:h-auto md:w-auto md:flex-row md:gap-8 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 ">
+	<nav class="{{ menu_classes }} fixed -top-full peer-checked:top-0 h-full z-10 left-0 w-full bg-white shadow-lg md:bg-transparent md:shadow-none transition-all duration-300 ease-in-out md:h-auto md:w-auto md:flex-row md:gap-8 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 ">
 
 		<ul class="flex gap-12 flex-col md:flex-row mx-auto">
 			{% for item in menu_items %}
