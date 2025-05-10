@@ -5,7 +5,11 @@
 
 <header class="px-2 w-full top-0 mb-10 z-50 flex justify-between gap-8 md:gap-0 items-center container mx-auto group border-dark-200 border-b py-5 relative ">
 	<a href="/" class="relative z-20">
-		Logo
+		{% if options.logo %}
+			<img src="{{ options.logo }}" alt="Logo" class="h-12 w-auto">
+		{% else %}
+			Logo
+		{% endif %}
 	</a>
 
 	<input type="checkbox" id="menu-toggle" class="hidden peer">
