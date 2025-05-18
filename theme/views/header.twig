@@ -17,11 +17,18 @@
 	<nav class="{{ menu_classes }} fixed -top-full peer-checked:top-0 h-full z-10 left-0 w-full bg-white shadow-lg md:bg-transparent md:shadow-none transition-all duration-300 ease-in-out md:h-auto md:w-auto md:flex-row md:gap-8 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 ">
 
 		<ul class="flex gap-12 flex-col md:flex-row mx-auto">
+
 			{% for item in menu_items %}
 				{% if 'js-cta' not in item.class %}
-					<li class="text-xl  text-center md:text-md md:text-left hover:underline {{'mobile_only' in item.class ? 'md:hidden' : ''}}">
-						<a href="{{ item.url }}" class="{{ check_url_match(item.url) ? 'font-semibold' : 'font-normal opacity-65' }}">{{ item.title }}</a>
-					</li>
+					{% if 'mobile-only' in item.class %}
+						<li class="text-xl text-center md:text-md md:text-left hover:underline md:hidden">
+							<a href="{{ item.url }}" class="{{ check_url_match(item.url) ? 'font-semibold' : 'font-normal opacity-65' }}">{{ item.title }}</a>
+						</li>
+					{% else %}
+						<li class="text-xl text-center md:text-md md:text-left hover:underline">
+							<a href="{{ item.url }}" class="{{ check_url_match(item.url) ? 'font-semibold' : 'font-normal opacity-65' }}">{{ item.title }}</a>
+						</li>
+					{% endif %}
 				{% endif %}
 			{% endfor %}
 		</ul>
