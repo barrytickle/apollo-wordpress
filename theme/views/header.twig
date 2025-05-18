@@ -6,7 +6,7 @@
 <header class="px-2 w-full top-0 mb-10 z-50 flex justify-between gap-8 md:gap-0 items-center container mx-auto group border-dark-200 border-b py-5 fixed bg-white md:relative ">
 	<a href="/" class="relative z-20">
 		{% if options.logo %}
-			<img src="{{ options.logo }}" alt="Logo" class="h-12 w-auto">
+			<img src="{{ options.logo.url }}" alt="Logo" class="h-12 w-auto">
 		{% else %}
 			Logo
 		{% endif %}
@@ -21,6 +21,12 @@
 				{% if 'js-cta' not in item.class %}
 					<li class="text-xl  text-center md:text-md md:text-left hover:underline">
 
+						<a href="{{ item.url }}" class=" {{check_url_match(item.url) ?  'font-semibold' : 'font-normal opacity-65'}}">{{ item.title }}</a>
+					</li>
+				{% endif %}
+
+				{% if 'mobile-only' in item.class %}
+					<li class="text-xl text-center md:text-md md:text-left md:hidden hover:underline">
 						<a href="{{ item.url }}" class=" {{check_url_match(item.url) ?  'font-semibold' : 'font-normal opacity-65'}}">{{ item.title }}</a>
 					</li>
 				{% endif %}

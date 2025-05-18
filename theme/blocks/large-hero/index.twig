@@ -8,11 +8,16 @@
 			classes:"text-xl" } %}
 	</div>
 	{% if fields.images %}
-		<div class="flex justify-center gap-6 mt-6 overflow-x-hidden">
-
+		<div class="justify-center gap-6 mt-6 overflow-x-hidden {{fields.mobile_only_image ? 'hidden md:flex' : 'flex'}}">
 			{% for image in fields.images %}
 				<img src="{{image.sizes.large}}" alt="{{image.image.alt}}" class="w-full h-auto my-4 max-w-[300px] max-h-[420px] rounded-xl object-cover object-center shadow-md"/>
 			{% endfor %}
+		</div>
+	{% endif %}
+
+	{% if fields.mobile_only_image %}
+		<div class="flex justify-center mt-6 md:hidden">
+			<img src="{{fields.mobile_only_image.sizes.large}}" alt="{{fields.mobile_only_image.image.alt}}" class="w-full h-auto my-4 max-w-[300px] max-h-[420px] rounded-xl object-cover object-center shadow-md"/>
 		</div>
 	{% endif %}
 </section>
