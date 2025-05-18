@@ -19,24 +19,18 @@
 		<ul class="flex gap-12 flex-col md:flex-row mx-auto">
 			{% for item in menu_items %}
 				{% if 'js-cta' not in item.class %}
-					<li class="text-xl  text-center md:text-md md:text-left hover:underline">
-
+					<li class="text-xl  text-center md:text-md md:text-left hover:underline {{'mobile_only' in item.class ? 'md:hidden' : ''}}">
 						<a href="{{ item.url }}" class=" {{check_url_match(item.url) ?  'font-semibold' : 'font-normal opacity-65'}}">{{ item.title }}</a>
 					</li>
 				{% endif %}
 
-				{% if 'mobile-only' in item.class %}
-					<li class="text-xl text-center md:text-md md:text-left md:hidden hover:underline">
-						<a href="{{ item.url }}" class=" {{check_url_match(item.url) ?  'font-semibold' : 'font-normal opacity-65'}}">{{ item.title }}</a>
-					</li>
-				{% endif %}
-			{% endfor %}
-		</ul>
-	</nav>
 
-	{% for item in menu_items %}
-		{% if 'js-cta' in item.class %}
-			{% include 'components/button.twig' with { button: {
+			</ul>
+		</nav>
+
+		{% for item in menu_items %}
+			{% if 'js-cta' in item.class %}
+				{% include 'components/button.twig' with { button: {
                 url: {
                     title: item.title, 
                     url: item.url,
@@ -45,20 +39,20 @@
             },
                 classes: 'relative z-20' 
             } %}
-		{% endif %}
-	{% endfor %}
+			{% endif %}
+		{% endfor %}
 
-	<!-- Open (Hamburger) Icon - shown when NOT checked -->
-	<label for="menu-toggle" class="md:hidden block peer-checked:hidden cursor-pointer relative z-20">
-		<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
-		</svg>
-	</label>
+		<!-- Open (Hamburger) Icon - shown when NOT checked -->
+		<label for="menu-toggle" class="md:hidden block peer-checked:hidden cursor-pointer relative z-20">
+			<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+			</svg>
+		</label>
 
-	<!-- Close (X) Icon - shown when checked -->
-	<label for="menu-toggle" class="md:hidden hidden peer-checked:block cursor-pointer relative z-20">
-		<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-		</svg>
-	</label>
-</header>
+		<!-- Close (X) Icon - shown when checked -->
+		<label for="menu-toggle" class="md:hidden hidden peer-checked:block cursor-pointer relative z-20">
+			<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+			</svg>
+		</label>
+	</header>
