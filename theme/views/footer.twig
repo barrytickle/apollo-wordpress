@@ -9,10 +9,10 @@
 </div>
 <footer class="bg-black pt-8 relative flex flex-col items-center justify-center ">
 	<div class="container mx-auto flex flex-col md:flex-row mb-4 justify-between">
-		<nav class="flex flex-col items-center">
-			<ul class="flex gap-8 flex-row flex-wrap md:flex-nowrap">
+		<nav class="flex flex-col md:items-center">
+			<ul class="gap-8 md:block columns-2 px-4 md:px-0">
 				{% for item in menus['main-menu'].items %}
-					<li class="text-white opacity-70 w-[45%] md:w-auto flex justify-center md:block hover:opacity-100 text-left">
+					<li class="text-white opacity-70  md:w-auto hover:opacity-100 text-left mb-4">
 						<a href="{{ item.url }}" class=" {{check_url_match(item.url) ?   'font-semibold' : 'font-normal opacity-65'}}">{{ item.title }}</a>
 					</li>
 				{% endfor %}
@@ -27,7 +27,7 @@
 			</a>
 		</div>
 	</footer>
-	<div class="bg-black pb-4 w-full text-center md:text-left ">
+	<div class="bg-black pb-4 w-full text-center md:text-left pt-4 ">
 		<div class="container mx-auto text-white opacity-70">
 			Made with ❤️ by
 			<a href="https://barrytickle.com" target="_blank" class="underline">Barry Tickle</a>
