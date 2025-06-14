@@ -16,10 +16,6 @@
 			<h1 class="text-8xl font-secondary font-bold  my-8">{{ post.title }}</h1>
 		</div>
 	{% endif %}
-	<div class="container mx-auto">
 
-
-		{% set processed_content = post.content|raw %}
-		{{ processed_content }}
-	</div>
+	{{ processed_content }}
 {% endblock %}
