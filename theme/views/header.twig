@@ -19,7 +19,7 @@
 		<ul class="flex gap-12 flex-col md:flex-row mx-auto">
 
 			{% for item in menu_items %}
-				{% if 'js-cta' not in item.class or if 'hidden' not in item.class %}
+				{% if 'js-cta' not in item.class or 'hidden' not in item.class %}
 					{% if 'mobile-only' in item.class and  %}
 						<li class="text-xl text-center md:text-md md:text-left hover:underline md:hidden">
 							<a href="{{ item.url }}" class="{{ check_url_match(item.url) ? 'font-semibold' : 'font-normal opacity-65' }}">{{ item.title }}</a>
